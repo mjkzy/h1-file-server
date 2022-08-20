@@ -1,0 +1,26 @@
+{
+    "name": "h1-mod-download",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "engines": {
+        "node": ">=16.14.0"
+    },
+    "type": "module",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "mikzy <> (https://github.com/mjkzy)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mjkzy/h1-mod-download.git"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mjkzy/h1-mod-download/issues"
+    },
+    "homepage": "https://github.com/mjkzy/h1-mod-download#readme",
+    "dependencies": {
+        "express": "^4.18.1"
+    }
+}

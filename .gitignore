@@ -1,0 +1,12 @@
+# Packages
+node_modules/
+
+# Private Data
+config.json
+db.*
+## Ignore all guild import/export data:
+*port.json
+
+# Misc
+*.bak
+.DS_Store
