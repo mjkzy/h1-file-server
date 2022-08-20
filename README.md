@@ -5,8 +5,8 @@
 - [Node.js](https://nodejs.org/) >= v16.14.0
 
 #### Installation
-1. Make a folder (ex: `h1-file-server`) in your MWR game files
-2. Have a valid mods folder in the root directory (ex: `mods/honeybadger/mod.ff`)
+1. Clone this repository into your Modern Warfare folder where H1-mod is installed (instructions below)
+2. Create a valid mods folder in the root directory (ex: `mods/honeybadger/mod.ff`)
 
 ```bat
 git clone https://github.com/mjkzy/h1-file-server.git
