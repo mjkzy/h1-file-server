@@ -1,30 +1,18 @@
-import fs from "node:fs";
-import { fileURLToPath } from 'node:url';
 import express from 'express';
-import path from "node:path";
-
-const dirname = fileURLToPath(new URL(`.`, import.meta.url));
 
 const app = express();
 
-app.get(`/mods/:mod/:file`, (request, response) =>
+app.use(`/mods`, express.static(`../mods`));
+app.use(`/usermaps`, express.static(`../usermaps`));
+app.set(`views`, `./`);
+app.set(`view engine`, `ejs`);
+
+app.get(`/`, (request, response) =>
 {
-    const { mod, file } = request.params;
-
-    if (!mod || !file)
-    {
-        return;
-    }
-
-    const mod_dir = path.join(dirname, `..`, `mods/${ mod }/${ file }`);
-    if (fs.existsSync(mod_dir))
-    {
-        console.log(mod_dir);
-        response.download(mod_dir);
-    }
+    response.render(`index`);
 });
 
 app.listen(6969, () =>
 {
-    console.log(`listening on port 6969`);
+    console.log(`h1 file server listening on port 6969`);
 });
